@@ -38,29 +38,9 @@ namespace ClassLibrary1
                 stats.Fuel -= 3;
             }
 
-            //stats.Fatigue++;
-            //Console.WriteLine("Förarens trötthet har ökat");
-
-            //if (stats.Fatigue == MaxDriverFatigue)
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Red;
-            //    Console.WriteLine($"Föraren är mycket trött! Du bör ta en rast snart.+ {CarStatus.FatigueLevelTooLow}");
-            //    Console.ResetColor();
-            //}
-            //else if (stats.Fatigue >= 7 && stats.Fatigue <= 9 )
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Yellow;
-            //    Console.WriteLine($"Föraren börjar bli trött. Du bör snart ta en rast.+ {CarStatus.FatigueLevelLow}");
-            //    Console.ResetColor();
-            //}
         }
 
-        //public void SelectMenuOption(MenuOption option)
-        //{
-        //    Console.WriteLine($"Menyoption {option} har valts");
-
-        //}
-
+       
         public void DriverFatigue(STATS stats)
         {
             stats.Fatigue++;
@@ -112,21 +92,7 @@ namespace ClassLibrary1
                 stats.Fuel -= 3;
             }
 
-            //stats.Fatigue++;
-            //Console.WriteLine("Förarens trötthet har ökat");
-
-            //if (stats.Fatigue == MaxDriverFatigue)
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Red;
-            //    Console.WriteLine($"Föraren är mycket trött! Du bör ta en rast snart.+ {CarStatus.FatigueLevelTooLow}");
-            //    Console.ResetColor();
-            //}
-            //else if (stats.Fatigue >= 7 && stats.Fatigue <= 9)
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Yellow;
-            //    Console.WriteLine($"Föraren börjar bli trött. Du bör snart ta en rast.+ {CarStatus.FatigueLevelLow}");
-            //    Console.ResetColor();
-            //}
+           
         }
         public void Reverse(STATS stats)
         {
@@ -150,54 +116,14 @@ namespace ClassLibrary1
                 stats.Fatigue++;
                 stats.Fuel -= 3;
             }
-            //stats.Fatigue++;
-            //Console.WriteLine("Förarens trötthet har ökat");
-
-            //if (stats.Fatigue <= 1)
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Red;
-            //    Console.WriteLine($"Föraren är mycket trött! Du bör ta en rast snart.+ {CarStatus.FatigueLevelTooLow}");
-            //    Console.ResetColor();
-            //}
-            //else if (stats.Fatigue >= 4 && stats.Fatigue <= 6)
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Yellow;
-            //    Console.WriteLine($"Föraren börjar bli trött. Du bör snart ta en rast.+ {CarStatus.FatigueLevelLow}");
-            //    Console.ResetColor();
-            //}
+            
         }
-        //public void Rest()
-        //{
-        //    // Logik för att starta motorn
-        //    Console.WriteLine("Bilen bromsar");
-        //    driverFatigue++;
-        //}
+       
         public void Rest(STATS stats)
         {
             stats.Fatigue = 0;
             Console.WriteLine("Föraren tog en rast");
-            //if (stats.Fatigue == 10)
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Red;
-            //    Console.WriteLine("Föraren är för trött! Du måste ta en rast.");
-            //    Console.WriteLine("Bilen stannar tills du tar en rast.");
-            //    Console.ResetColor();
-
-            //    while (stats.Fatigue <= 10)
-            //    {
-            //        // Vänta på att föraren tar en rast
-            //        Console.WriteLine("Väntar på att du tar en rast...");
-            //        // Här kan du lägga till eventuell kod för att vänta, t.ex. Thread.Sleep() eller liknande
-            //    }
-
-            //    Console.WriteLine("Du har tagit en rast. Du kan fortsätta köra nu.");
-            //}
-            //else
-            //{
-            //    Console.ForegroundColor = ConsoleColor.Yellow;
-            //    Console.WriteLine("Föraren är inte tillräckligt trött för att ta en rast.");
-            //    Console.ResetColor();
-            //}
+           
         }
         public void Exit()
         {

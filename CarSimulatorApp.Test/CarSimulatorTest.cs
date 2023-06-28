@@ -95,5 +95,14 @@ namespace CarSimulatorApp.Test
             SUT.Reverse(stats);
             Assert.AreEqual(expected, stats.Fuel);
         }
+        [TestMethod]
+        public void Refuel_Test()
+        {
+            STATS stats = new STATS();
+            stats.Fuel = 0;
+            var expected = 30;
+            SUT.RefuelGasoline(stats);
+            Assert.AreEqual(expected, stats.Fuel);
+        }
     }
 }

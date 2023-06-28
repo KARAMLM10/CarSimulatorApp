@@ -17,7 +17,7 @@ namespace CarSimulatorApp.Test
             SUT = new CarSimulator();
         }
         [TestMethod]
-        public void low_gasolinFiul()
+        public void low_Fatigue()
         {
             STATS stats = new STATS();
             var expected = 1;
@@ -50,6 +50,50 @@ namespace CarSimulatorApp.Test
             var expected = Direction.East;
             SUT.SetDirection(newDirection, stats);
             Assert.AreEqual(expected, stats.Direction);
+        }
+        [TestMethod]
+        public void Direction_West_test()
+        {
+            STATS stats = new STATS();
+            var newDirection = Direction.West;
+            var expected = Direction.West;
+            SUT.SetDirection(newDirection, stats);
+            Assert.AreEqual(expected, stats.Direction);
+        }
+        [TestMethod]
+        public void Direction_South_test()
+        {
+            STATS stats = new STATS();
+            var newDirection = Direction.South;
+            var expected = Direction.South;
+            SUT.SetDirection(newDirection, stats);
+            Assert.AreEqual(expected, stats.Direction);
+        }
+        [TestMethod]
+        public void Direction_Noth_test()
+        {
+            STATS stats = new STATS();
+            var newDirection = Direction.North;
+            var expected = Direction.North;
+            SUT.SetDirection(newDirection, stats);
+            Assert.AreEqual(expected, stats.Direction);
+        }
+        [TestMethod]
+        public void Reverse_Fuel_test()
+        {
+            STATS stats = new STATS();
+            var expected = 27;
+            SUT.Reverse(stats);
+            Assert.AreEqual(expected, stats.Fuel);
+        }
+        [TestMethod]
+        public void Reverse_LowFuel_test()
+        {
+            STATS stats = new STATS();
+            stats.Fuel = 6;
+            var expected = 3;
+            SUT.Reverse(stats);
+            Assert.AreEqual(expected, stats.Fuel);
         }
     }
 }

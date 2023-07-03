@@ -10,7 +10,6 @@ namespace ClassLibrary1
     {
         public int Fuel { get; set; } = 30;
         public Direction Direction { get; set; } = Direction.North;
-        public int Fatigue { get; set; } = 0;        
-
+        public int Fatigue { get; set; } = 0; 
     }
 }

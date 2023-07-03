@@ -23,10 +23,13 @@ namespace ClassLibrary1
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Bensinen är slut. Du måste tanka innan du kan köra vidare.");
                 Console.ResetColor();
+                
             }
             else if (stats.Fuel < 10)
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Bensinen börjar tar slut");
+                Console.ResetColor();
                 Console.WriteLine("Bilen kör framåt");
                 stats.Fatigue++;
                 stats.Fuel -= 3;
@@ -49,7 +52,7 @@ namespace ClassLibrary1
             if (stats.Fatigue >= 10)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Föraren är mycket trött! Du bör ta en rast snart.");
+                Console.WriteLine("Föraren är mycket trött! Du Måste ta en rast snart.");
                 Console.ResetColor();
             }
             else if (stats.Fatigue >= 7 && stats.Fatigue <= 9)
@@ -65,7 +68,9 @@ namespace ClassLibrary1
         {
             // Logik för att fylla på bensin
             stats.Fuel = 30;
+            Console.BackgroundColor = ConsoleColor.Green;
             Console.WriteLine("Bilen har tankats till full kapacitet");
+            Console.ResetColor();
         }
 
         public void DriveForward(STATS stats)
@@ -79,7 +84,9 @@ namespace ClassLibrary1
             }
             else if (stats.Fuel < 10)
             {
+                Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Bensinen börjar tar slut");
+                Console.ResetColor();
                 // Console.WriteLine("Bilen backar");
                 Console.WriteLine("Bilen kör framåt");
                 stats.Fatigue++;
@@ -105,7 +112,9 @@ namespace ClassLibrary1
             }
             else if (stats.Fuel < 10 )
             {
+                Console.BackgroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("Bensinen börjar tar slut");
+                Console.ResetColor();
                 Console.WriteLine("Bilen backar");
                 stats.Fatigue++;
                 stats.Fuel -= 3;
@@ -122,7 +131,9 @@ namespace ClassLibrary1
         public void Rest(STATS stats)
         {
             stats.Fatigue = 0;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Föraren tog en rast");
+            Console.ResetColor();
            
         }
         public void Exit()
